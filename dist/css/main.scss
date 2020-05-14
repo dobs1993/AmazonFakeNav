@@ -1,0 +1,105 @@
+// General Styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #333;
+
+    #main-nav {
+    width: 100%;
+    background: #fff;
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+
+
+        .left-side {
+            img {
+                height: 80px;
+            }
+        }
+
+        .right-side {
+            ul {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                li {
+                    padding: 1.5rem 1.5rem;
+                    position: relative;
+
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+
+            li:hover {
+                background: rgb(255, 159, 80);
+
+                ul {
+                    display: block;
+                    color: white;
+                    z-index: 2;
+                    position: absolute;
+                    margin-top: 4rem;
+                    top: 0;
+                    left: 0;
+                    background: rgba(255, 127, 80, 0.233);
+                    width: 200px;
+
+                    li {
+                        background: #e7e7e7;
+                        transition: 1s all ease;
+                        color: #000;
+
+                        &:hover {
+                            background: rgb(255, 159, 80);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+@media (min-width:01px) and (max-width:650px) {
+#main-nav {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+}
+
+.right-side {
+    width: 100%;
+            ul {
+                margin-top: -0.5rem;
+                flex-direction: column;
+                background: #fff;
+                text-align: center;
+
+                li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+                    display: none;
+                }
+
+}
+}
+}
+}
